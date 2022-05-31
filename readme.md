@@ -1,7 +1,12 @@
 # Applifaction Development Environment
 Development environment for **[Shopware 6](https://www.shopware.com/), [Magento](https://magento.com/), [Wordpress](https://wordpress.com/)** and many more. 
 
-This environment is based on [Dockware](https://github.com/dockware/dockware) <3
+This environment is based on **[Dockware](https://github.com/dockware/dockware) <3**
+
+## Main improvements
+- Fixed connection between PHP and [MailCatcher](https://mailcatcher.me/)
+- Installed [NVM](https://github.com/nvm-sh/nvm) & Node.js Version 16 is now default
+- Fixed `make watch-admin` command
 
 ## How to build & tag
 ```
@@ -9,9 +14,9 @@ docker-compose build
 docker tag dockerfaction_essentials:latest dockerfaction/essentials:latest
 ```
 
-## Docker Compose
+## How to use
 Use this image in a **docker-compose.yaml** file in your project, which looks like this.  
-Please make sure to **build** the image locally, **before** using it at your project.
+Please make sure to **build & tag** the image locally, **before** using it at your project.
 
 Make sure to replace: 
 - `<YOUR_PROJECT_CONTAINER_NAME>`
@@ -26,6 +31,7 @@ services:
     image: dockerfaction/essentials:latest
     ports:
       - "80:80"     # apache2
+      - "8888:8888" # watch admin
       - "9998:9998" # watch storefront proxy
       - "3306:3306" # mysql port
     volumes:
