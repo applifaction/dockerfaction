@@ -1,4 +1,7 @@
 # Applifaction Development Environment
+Development environment for **[Shopware 6](https://www.shopware.com/), [Magento](https://magento.com/), [Wordpress](https://wordpress.com/)** and many more. 
+
+This environment is based on [Dockware](https://github.com/dockware/dockware) <3
 
 ## How to build & tag
 ```
